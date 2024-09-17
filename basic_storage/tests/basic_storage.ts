@@ -9,8 +9,6 @@ describe("basic_storage", () => {
   const program = anchor.workspace.BasicStorage as Program<BasicStorage>;
 
   it("Is initialized!", async () => {
-    // Add your test here.
-    const tx = await program.methods.initialize().rpc();
-    console.log("Your transaction signature", tx);
+    await program.methods.initialize().accounts({}).rpc();
   });
 });
